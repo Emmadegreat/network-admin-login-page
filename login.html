@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>internet hotspot > login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="./login.css">
+<!--<style type="text/css">
+body {color: #737373; font-size: 10px; font-family: verdana; background-image: url(img/pics1.png); }
+
+textarea,input,select {
+background-color: #FDFBFB;
+border: 1px solid #BBBBBB;
+padding: 2px;
+margin: 1px;
+font-size: 14px;
+color: #808080;
+}
+
+a, a:link, a:visited, a:active { color: #AAAAAA; text-decoration: none; font-size: 10px; }
+a:hover { border-bottom: 1px dotted #c1c1c1; color: #AAAAAA; }
+img {border: none;}
+td { font-size: 14px; color: #7A7A7A; }
+</style>-->
+
+</head>
+
+<body>
+	<nav class="header">
+        <h3>Login Page</h3>
+        <a href="./logout.html">Click here to sign out</a>
+    </nav>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+<div align="center">
+<a href="$(link-login-only)?target=lv&amp;dst=$(link-orig-esc)">Latviski</a>
+</div>
+
+<main>
+    <section class="wrapper" id="wrapper">
+	<div class="box" id="box-1">
+    	<img src="./img/symbol-of-justice.png" alt="img-1" id="box-1-img">
+	</div>
+            <div class="box" id="box-2">
+                <div class="state-logo">
+                    <img src="./img/logo.png" alt="state-logo" id="state-logo">
+                    <span>Chief Magistrate court.</span>
+                </div>
+                <form name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+                    <legend>
+                        <b id="bold">Welcome back</b>
+                        <p id="welcome">Please log on to use the internet hotspot service<br />$(if trial == 'yes')Free trial available, <a style="color: #FF8080"href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">click here</a>.$(endif).</p>
+                    </legend>
+
+                    <section>
+                        <div> 
+                            <label for="username">Staff ID</label><br>
+                            <input type="text" name="username" placeholder="Enter your staff id" required>
+                        </div>
+                        <div> 
+                            <label for="password">Password</label><br>
+                            <input type="password" name="password" id="password" placeholder="********" required>
+                        </div>
+                        <div id="forgot-password">
+                            <input type="checkbox" name="check" id="" required><span id="remember">Remember for 30 days</span>
+                            <a href="#">Forgot password</a>
+                        </div>
+                        <div> 
+                            <input type="submit" value="Sign in" id="submit">
+                        </div>
+                    </section>
+                </form>
+				
+                <article class="support">
+					<a href="http://www.mikrotik.com" target="_blank"><img src="./img/mikrotik.png" alt="mikrotik" style="width: 30px;height: 30px;border-radius: 50%;"/></a>
+                    <h3 href="#">Powered by Ray Software and Services</h3><br>
+                    <h4>Magistrate Court | Contact Us | Branch Locator | FAQs</h4>
+                    <h5>Lagos State judiciary</h5>
+                </article>
+            </div>
+            
+        </section>
+</main>
+        <footer>
+            <div class="footer">
+                <p>&copy; All Rights | Reserved | EMFCONZULT 2022</p>
+            </div>
+        </footer>
+
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+</body>
+</html>

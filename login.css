@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.header{
+    background: #1d3044;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.2rem 1rem;
+    position: fixed;
+    font-size: 1.1rem;
+    z-index: 2000;
+}
+.header a{
+  color: #fff;
+  text-decoration: none;
+}
+.header a:hover{
+  color: chocolate;
+  text-decoration: none;
+}
+main{
+    padding: 4rem 2rem;
+}
+main{
+    background-image: url("./img/lawyers-wear.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+footer{
+    height: 60px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #1d3044;
+    color: antiquewhite;
+    font-size: 1rem;
+}
+.wrapper{
+    max-width: 750px;
+    z-index: 1000;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    border: 3px solid chocolate;
+}
+.box{
+    flex-basis: 50%;
+}
+#box-1 img{
+    width: 100%;
+    height: 100%;
+}
+#box-1{
+    background-image: url("../images/download.pn");
+    background-size: 100% 100%;
+    background-color: aquamarine;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#box-2{
+    background-color: rgb(88, 84, 80);
+    padding: 4rem  2rem 1rem 2rem;
+}
+
+#box-2 form{
+    margin-top: 1.2rem;
+    background-color: #7bf08f;
+    padding: 1.2rem 1rem;
+    box-shadow: 5px 10px #1d3044;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+#box-2 #state-logo{
+    width: 55px;
+    height: auto;
+    margin-bottom: rem;
+    border-radius: 50%;
+}
+#box-2 .state-logo span{
+    color: #ede7e7;
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: absolute;
+    line-height: 3rem;
+}
+#box-2 form #welcome{
+    font-size: 0.7rem !important;
+    padding: 0.4rem 0rem;
+    color: #000;
+}
+#box-2 legend{
+    margin-bottom: 0.8rem;
+}
+form>section>div{
+    margin-top: 0.9rem;
+}
+form>section>div>input{
+    height: 36px;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+}
+form>section>div>#submit{
+    background-color: chocolate;
+    color: #fff;
+}
+form>section>div>#submit:hover{
+    background-color: #1d3044;
+    color: chocolate;
+}
+
+form>section>#forgot-password a{
+    font-size: 0.6rem;
+    float: right;
+    text-decoration: none;
+    color: chocolate;
+    margin-top: 0.9rem;
+}
+form>section>#forgot-password a:hover{
+    color: midnightblue;
+}
+form>section>#forgot-password #remember{
+    font-size: 0.6rem;
+    font-weight: 600;
+    position: absolute;
+    margin: 0.8rem 0.3rem;
+}
+form>section>#forgot-password input{
+    width: 15px;
+    font-size: 0.5rem;
+}
+#box-2 article{
+    margin: 2rem 1.2rem 0rem 0rem;
+    font-size: 0.6rem;
+    color: #ede7e7;
+}
+#box-2 article h3{
+    padding: 0.2rem 0rem;
+    color: chocolate;
+}
+#box-2 article h5{
+    padding-top: 0.4rem;
+}
+@media screen and (max-width:734px){
+    main{
+        max-height: 1200px;
+        height: 100%;
+        padding: 3rem 0.9rem 2rem 0.9rem;
+    }
+    main{
+        background-image: url("./img/lawyers-wear.png");
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+@media screen and (max-width:670px){
+    .wrapper{
+        max-width: 450px;
+        height: 100%;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;   
+    }
+    
+}
+
+
